@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 
 function TypingEffect() {
   const [text, setText] = useState('');
-  const fullText = 'Hanif';
+  const fullText = '<>Hanif<>';
   
   useEffect(() => {
     let index = 0;
@@ -59,6 +59,80 @@ function ScrollReveal({ children, delay = 0 }) {
     </div>
   );
 }
+
+function TypingDescription() {
+  const texts = [
+    'UI/UX Designer',
+    'Web Designer',
+    'Short Video Editor'
+  ];
+
+  const [text, setText] = useState('');
+  const [index, setIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
+
+  useEffect(() => {
+    const currentText = texts[index];
+    const typing = setInterval(() => {
+      if (charIndex < currentText.length) {
+        setText(currentText.slice(0, charIndex + 1));
+        setCharIndex(charIndex + 1);
+      } else {
+        clearInterval(typing);
+        setTimeout(() => {
+          setCharIndex(0);
+          setText('');
+          setIndex((index + 1) % texts.length);
+        }, 1500);
+      }
+    }, 80);
+
+    return () => clearInterval(typing);
+  }, [charIndex, index]);
+
+  return <span>{text}</span>;
+}
+
+function TypingParagraph() {
+  const fullText =
+    'Saya adalah seorang desainer dan developer yang passionate tentang menciptakan pengalaman digital yang menarik. Dengan perpaduan antara desain yang indah dan fungsionalitas yang solid, saya membantu brand Anda stand out di dunia digital.';
+
+  const [text, setText] = useState('');
+  const [index, setIndex] = useState(0);
+  const [startTyping, setStartTyping] = useState(false);
+
+  useEffect(() => {
+    const delayTimer = setTimeout(() => {
+      setStartTyping(true);
+    }, 1200); // ⏱ delay sebelum mulai (ms)
+
+    return () => clearTimeout(delayTimer);
+  }, []);
+
+  useEffect(() => {
+    if (!startTyping) return;
+
+    const interval = setInterval(() => {
+      if (index < fullText.length) {
+        setText(fullText.slice(0, index + 1));
+        setIndex(index + 1);
+      } else {
+        clearInterval(interval);
+      }
+    }, 20); // kecepatan typing
+
+    return () => clearInterval(interval);
+  }, [startTyping, index]);
+
+  return (
+   <p className="font-sans text-gray-300 mb-8 leading-relaxed">
+    {text}
+    <span className="cursor">|</span>
+  </p>
+  );
+}
+
+
 
 export default function Portfolio() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -162,11 +236,9 @@ export default function Portfolio() {
             <h1 className="text-5xl md:text-6xl font-bold mb-2">
               I am <span className="text-purple-400 glow-text"><TypingEffect /></span>
             </h1>
-            <p className="text-gray-400 text-lg mb-6">UI/UX Design & Designer</p>
+            <p className="text-gray-400 text-lg mb-6 h-6"><TypingDescription /></p>
             
-            <p className="text-gray-300 mb-8 leading-relaxed">
-              Saya adalah seorang desainer dan developer yang passionate tentang menciptakan pengalaman digital yang menarik. Dengan perpaduan antara desain yang indah dan fungsionalitas yang solid, saya membantu brand Anda stand out di dunia digital.
-            </p>
+            <TypingParagraph />
 
             <div className="flex gap-4 mb-8">
               <button className="px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg flex items-center gap-2 transition transform hover:scale-105">
@@ -296,7 +368,7 @@ export default function Portfolio() {
                 <Mail size={24} />
               </a>
             </div>
-            <p className="text-gray-500 text-sm">© 2024 Your Portfolio. All rights reserved.</p>
+            <p className="text-gray-500 text-sm">© 2025 By Hanif. All rights reserved.</p>
           </div>
         </div>
       </section>
