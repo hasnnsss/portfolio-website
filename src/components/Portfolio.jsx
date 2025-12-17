@@ -211,7 +211,7 @@ export default function Portfolio() {
       {/* Services Section */}
       <section id="about" className="py-20 px-6 bg-slate-900/50">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16">What I Offer</h2>
+          <h2 className="text-4xl font-bold text-center mb-16">Keahlian Saya</h2>
           
           <div className="grid md:grid-cols-3 gap-8">
             {[
@@ -242,10 +242,10 @@ export default function Portfolio() {
           
           <div className="grid md:grid-cols-2 gap-8">
             {[
-              { title: "E-Commerce Platform", tag: "Web Design", link: "https://github.com/your-github-username/project1" },
-              { title: "Mobile App Design", tag: "Mobile Design", link: "https://github.com/your-github-username/project2" },
-              { title: "Brand Identity", tag: "Branding", link: "https://github.com/your-github-username/project3" },
-              { title: "Dashboard System", tag: "UI/UX", link: "https://github.com/your-github-username/project4" }
+              { title: "My Todo App", tag: "Web Design", link: "https://my-todo-app-gamma-five.vercel.app/" },
+              { title: "Short Editing", tag: "Video Editing", link: "https://www.tiktok.com/@jbioone/video/7535005361745513744?is_from_webapp=1&sender_device=pc&web_id=7520999333887804935" },
+              { title: "Brand Identity", tag: "Branding (soon)", link: "https://github.com/your-github-username/project3" },
+              { title: "Dashboard System", tag: "UI/UX (soon)", link: "https://github.com/your-github-username/project4" }
             ].map((project, i) => (
               <a
                 key={i}
@@ -258,7 +258,7 @@ export default function Portfolio() {
                 <div className="relative">
                   <span className="text-sm text-purple-400 font-medium">{project.tag}</span>
                   <h3 className="text-2xl font-bold mt-4 mb-2">{project.title}</h3>
-                  <p className="text-gray-400 mb-6">Proyek profesional yang menampilkan keahlian saya dalam desain dan development.</p>
+                  <p className="text-gray-400 mb-6"> Menampilkan Beberapa project terakhir saya dalam desain dan development</p>
                   <div className="flex items-center text-purple-400 group-hover:translate-x-2 transition">
                     View Project
                     <ExternalLink size={18} className="ml-2" />
