@@ -321,7 +321,7 @@ export default function Portfolio() {
           
           <div className="grid md:grid-cols-2 gap-8">
             {[
-              { title: "My Todo App", tag: "Website", link: "www.youtube.com", image: project1Img },
+              { title: "My Todo App", tag: "Website", link: "https://my-todo-app-gamma-five.vercel.app/", image: project1Img },
               { title: "Short Editing", tag: "Video Editing", link: "https://www.tiktok.com/@jbioone/video/7535005361745513744", image: project2Img },
               { title: "UI UX Design", tag: "formlogin", image: project3Img },
               { title: "banner desain", tag: "", image: project4Img }
