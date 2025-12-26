@@ -1,5 +1,10 @@
 import { Download, ExternalLink, Github, Linkedin, Mail, Menu, X, Gamepad2, Book, Music } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import profileImg from '../assets/images/profile.PNG';
+import project1Img from '../assets/images/project1.jpg';
+import project2Img from '../assets/images/project2.jpg';
+import project3Img from '../assets/images/project3.jpg';
+import project4Img from '../assets/images/project4.jpg';
 
 
 function TypingEffect() {
@@ -136,6 +141,8 @@ function TypingParagraph() {
 
 export default function Portfolio() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [profileError, setProfileError] = useState(false);
+  const [projectsError, setProjectsError] = useState({});
 
   return (
     <div className="min-h-screen bg-slate-950 text-white overflow-hidden">
@@ -271,7 +278,7 @@ export default function Portfolio() {
           <div className="relative hidden md:block">
             <div className="w-80 h-80 bg-gradient-to-br from-purple-600 to-purple-900 rounded-2xl flex items-center justify-center overflow-hidden">
               <img 
-                src="/profile.png" 
+                src={profileImg}
                 alt="Profile"
                 className="w-full h-full object-cover"
               />
@@ -314,23 +321,32 @@ export default function Portfolio() {
           
           <div className="grid md:grid-cols-2 gap-8">
             {[
-              { title: "My Todo App", tag: "Web Design", link: "https://my-todo-app-gamma-five.vercel.app/" },
-              { title: "Short Editing", tag: "Video Editing", link: "https://www.tiktok.com/@jbioone/video/7535005361745513744?is_from_webapp=1&sender_device=pc&web_id=7520999333887804935" },
-              { title: "Brand Identity", tag: "Branding (soon)", link: "https://github.com/your-github-username/project3" },
-              { title: "Dashboard System", tag: "UI/UX (soon)", link: "https://github.com/your-github-username/project4" }
+              { title: "My Todo App", tag: "Web Design", link: "www.youtube.com", image: project1Img },
+              { title: "Short Editing", tag: "Video Editing", link: "https://www.tiktok.com/@jbioone/video/7535005361745513744", image: project2Img }
+              
             ].map((project, i) => (
               <a
                 key={i}
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative overflow-hidden rounded-lg bg-gradient-to-br from-slate-800 to-slate-900 p-8 border border-slate-700 hover:border-purple-500/50 transition cursor-pointer hover:shadow-lg hover:shadow-purple-500/50 click-shadow block"
+                className="group relative overflow-hidden rounded-lg bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 hover:border-purple-500/50 transition cursor-pointer hover:shadow-lg hover:shadow-purple-500/50 click-shadow block h-80"
               >
-                <div className="absolute inset-0 bg-purple-600/0 group-hover:bg-purple-600/10 transition"></div>
-                <div className="relative">
+                {/* Project Image */}
+                <img 
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                />
+                
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent group-hover:from-purple-900/80 transition duration-500"></div>
+                
+                {/* Content */}
+                <div className="absolute bottom-0 left-0 right-0 p-8">
                   <span className="text-sm text-purple-400 font-medium">{project.tag}</span>
-                  <h3 className="text-2xl font-bold mt-4 mb-2">{project.title}</h3>
-                  <p className="text-gray-400 mb-6"> Menampilkan Beberapa project terakhir saya dalam desain dan development</p>
+                  <h3 className="text-2xl font-bold mt-2 mb-2">{project.title}</h3>
+                  <p className="text-gray-300 mb-4 text-sm opacity-0 group-hover:opacity-100 transition">Menampilkan project terakhir saya</p>
                   <div className="flex items-center text-purple-400 group-hover:translate-x-2 transition">
                     View Project
                     <ExternalLink size={18} className="ml-2" />
@@ -352,7 +368,6 @@ export default function Portfolio() {
           
           <button className="px-8 py-4 bg-purple-600 hover:bg-purple-700 rounded-lg text-lg font-semibold transition transform hover:scale-105">
             Get In Touch
-            
           </button>
 
           {/* Footer */}
@@ -361,10 +376,10 @@ export default function Portfolio() {
               <a href="https://github.com/hasnnsss" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-purple-400 transition">
                 <Github size={24} />
               </a>
-              <a href="https://linkedin.com/in/your-linkedin-username" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-purple-400 transition">
+              <a href="https://linkedin.com/in/muhammad-naufal-hanif-790bbb348?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-purple-400 transition">
                 <Linkedin size={24} />
               </a>
-              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=your-email@gmail.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-purple-400 transition">
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mnhanifno1@gmail.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-purple-400 transition">
                 <Mail size={24} />
               </a>
             </div>
