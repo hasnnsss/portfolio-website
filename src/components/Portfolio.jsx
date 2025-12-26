@@ -321,7 +321,7 @@ export default function Portfolio() {
           
           <div className="grid md:grid-cols-2 gap-8">
             {[
-              { title: "My Todo App", tag: "Web Design", link: "www.youtube.com", image: project1Img },
+              { title: "My Todo App", tag: "Website", link: "www.youtube.com", image: project1Img },
               { title: "Short Editing", tag: "Video Editing", link: "https://www.tiktok.com/@jbioone/video/7535005361745513744", image: project2Img }
               
             ].map((project, i) => (
@@ -366,9 +366,14 @@ export default function Portfolio() {
             Punya ide? Mari kita ciptakan sesuatu yang amazing bersama-sama.
           </p>
           
-          <button className="px-8 py-4 bg-purple-600 hover:bg-purple-700 rounded-lg text-lg font-semibold transition transform hover:scale-105">
+          <a
+            href="https://wa.me/6289678941018"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-8 py-4 bg-purple-600 hover:bg-purple-700 rounded-lg text-lg font-semibold transition transform hover:scale-105"
+          >
             Get In Touch
-          </button>
+          </a>
 
           {/* Footer */}
           <div className="mt-20 pt-12 border-t border-slate-800">
