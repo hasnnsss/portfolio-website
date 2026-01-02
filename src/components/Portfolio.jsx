@@ -207,7 +207,7 @@ export default function Portfolio() {
             <a href="#projects" className="hover:text-purple-400 transition">Projects</a>
             <a href="#contact" className="hover:text-purple-400 transition">Contact</a>
             <button className="px-4 py-2 border border-purple-500 text-purple-400 rounded hover:bg-purple-500/10 transition">
-              Contact Me
+              <a href="https://wa.me/6289678941018">Contact Me</a>
             </button>
           </div>
 
@@ -391,7 +391,7 @@ export default function Portfolio() {
                 <Mail size={24} />
               </a>
             </div>
-            <p className="text-gray-500 text-sm">© 2025 By Hanif. All rights reserved.</p>
+            <p className="text-gray-500 text-sm">© 2026 By Hanif. All rights reserved.</p>
           </div>
         </div>
       </section>
