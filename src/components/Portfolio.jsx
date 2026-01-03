@@ -160,36 +160,15 @@ export default function Portfolio() {
         .click-shadow:active {
           box-shadow: 0 0 30px rgba(168, 85, 247, 0.6), 0 0 60px rgba(168, 85, 247, 0.4), inset 0 0 20px rgba(168, 85, 247, 0.2);
         }
-        @keyframes float {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-20px); }
-        }
-        .float-icon {
-          animation: float 3s ease-in-out infinite;
-          opacity: 0.1;
-        }
-        .float-icon-1 { animation-delay: 0s; }
-        .float-icon-2 { animation-delay: 1s; }
-        .float-icon-3 { animation-delay: 2s; }
       `}</style>
 
-      {/* Background Icons */}
+      {/* Gradient Backgrounds */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-20 left-20 text-purple-600 float-icon float-icon-1">
-          <Gamepad2 size={200} />
-        </div>
-        <div className="absolute top-40 right-40 text-purple-600 float-icon float-icon-2">
-          <Book size={180} />
-        </div>
-        <div className="absolute bottom-32 left-1/3 text-purple-600 float-icon float-icon-3">
-          <Music size={150} />
-        </div>
-        <div className="absolute bottom-20 right-20 text-purple-500 float-icon float-icon-1">
-          <Gamepad2 size={120} />
-        </div>
-        <div className="absolute top-1/2 right-10 text-purple-600 float-icon float-icon-2">
-          <Music size={160} />
-        </div>
+        <div className="absolute top-20 right-10 w-72 h-72 bg-gradient-to-br from-purple-600/30 to-purple-900/30 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-10 w-96 h-96 bg-gradient-to-tr from-blue-600/25 to-cyan-500/25 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/3 left-1/4 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-gradient-to-tl from-blue-400/25 to-purple-600/25 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl"></div>
       </div>
 
       {/* Navigation */}
@@ -207,7 +186,7 @@ export default function Portfolio() {
             <a href="#projects" className="hover:text-purple-400 transition">Projects</a>
             <a href="#contact" className="hover:text-purple-400 transition">Contact</a>
             <button className="px-4 py-2 border border-purple-500 text-purple-400 rounded hover:bg-purple-500/10 transition">
-              <a href="https://wa.me/6289678941018">Contact Me</a>
+              Contact Me
             </button>
           </div>
 
@@ -321,12 +300,10 @@ export default function Portfolio() {
           
           <div className="grid md:grid-cols-2 gap-8">
             {[
-              { title: "My Todo App", tag: "Website", link: "https://my-todo-app-gamma-five.vercel.app/", image: project1Img },
+              { title: "My Todo App", tag: "Web Design", link: "https://my-todo-app-gamma-five.vercel.app/", image: project1Img },
               { title: "Short Editing", tag: "Video Editing", link: "https://www.tiktok.com/@jbioone/video/7535005361745513744", image: project2Img },
-              { title: "UI UX Design", tag: "formlogin", image: project3Img },
-              { title: "banner desain", tag: "", image: project4Img }
-
-              
+              { title: "Brand Identity", tag: "Branding", link: "https://github.com/your-github-username/project3", image: project3Img },
+              { title: "Dashboard System", tag: "UI/UX", link: "https://github.com/your-github-username/project4", image: project4Img }
             ].map((project, i) => (
               <a
                 key={i}
@@ -391,7 +368,7 @@ export default function Portfolio() {
                 <Mail size={24} />
               </a>
             </div>
-            <p className="text-gray-500 text-sm">© 2026 By Hanif. All rights reserved.</p>
+            <p className="text-gray-500 text-sm">© 2025 By Hanif. All rights reserved.</p>
           </div>
         </div>
       </section>
