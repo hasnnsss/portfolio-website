@@ -368,7 +368,7 @@ export default function Portfolio() {
                 <Mail size={24} />
               </a>
             </div>
-            <p className="text-gray-500 text-sm">© 2025 By Hanif. All rights reserved.</p>
+            <p className="text-gray-500 text-sm">© 2026 By Hanif. All rights reserved.</p>
           </div>
         </div>
       </section>
