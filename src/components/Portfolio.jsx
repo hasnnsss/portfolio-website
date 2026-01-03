@@ -302,8 +302,8 @@ export default function Portfolio() {
             {[
               { title: "My Todo App", tag: "Web Design", link: "https://my-todo-app-gamma-five.vercel.app/", image: project1Img },
               { title: "Short Editing", tag: "Video Editing", link: "https://www.tiktok.com/@jbioone/video/7535005361745513744", image: project2Img },
-              { title: "Brand Identity", tag: "Branding", link: "https://github.com/your-github-username/project3", image: project3Img },
-              { title: "Dashboard System", tag: "UI/UX", link: "https://github.com/your-github-username/project4", image: project4Img }
+              { title: "UI UX Design", image: project3Img },
+              { title: "Banner Design", image: project4Img }
             ].map((project, i) => (
               <a
                 key={i}
