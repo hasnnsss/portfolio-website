@@ -1,4 +1,4 @@
-import { Download, ExternalLink, Github, Linkedin, Mail, Menu, X, Gamepad2, Book, Music } from 'lucide-react';
+import { Download, ExternalLink, Github, Linkedin, Mail, Menu, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import profileImg from '../assets/images/profile.PNG';
 import project1Img from '../assets/images/project1.jpg';
