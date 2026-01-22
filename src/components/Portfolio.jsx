@@ -78,24 +78,25 @@ function TypingDescription() {
   const [index, setIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
 
-  useEffect(() => {
-    const currentText = texts[index];
-    const typing = setInterval(() => {
-      if (charIndex < currentText.length) {
-        setText(currentText.slice(0, charIndex + 1));
-        setCharIndex(charIndex + 1);
-      } else {
-        clearInterval(typing);
-        setTimeout(() => {
-          setCharIndex(0);
-          setText('');
-          setIndex((index + 1) % texts.length);
-        }, 1500);
-      }
-    }, 80);
+useEffect(() => {
+  const currentText = texts[index];
+  const typing = setInterval(() => {
+    if (charIndex < currentText.length) {
+      setText(currentText.slice(0, charIndex + 1));
+      setCharIndex(charIndex + 1);
+    } else {
+      clearInterval(typing);
+      setTimeout(() => {
+        setCharIndex(0);
+        setText('');
+        setIndex((index + 1) % texts.length);
+      }, 1500);
+    }
+  }, 80);
 
-    return () => clearInterval(typing);
-  }, [charIndex, index]);
+  return () => clearInterval(typing);
+}, [charIndex, index, texts]);
+
 
   return <span>{text}</span>;
 }
@@ -143,8 +144,7 @@ function TypingParagraph() {
 
 export default function Portfolio() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [profileError, setProfileError] = useState(false);
-  const [projectsError, setProjectsError] = useState({});
+
 
   return (
     <div className="min-h-screen bg-slate-950 text-white overflow-hidden">
