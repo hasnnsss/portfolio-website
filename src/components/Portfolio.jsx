@@ -302,7 +302,7 @@ export default function Portfolio() {
           
           <div className="grid md:grid-cols-2 gap-8">
             {[
-              { title: "Mobile App", tag: "Royal whase", link:"https://www.figma.com/design/gISq4GkIWEiMPQTVb5PMWE/Kel-6_Aplikasi-Royal-Washes?node-id=0-1&t=uOibyZKziPg2skhH-1", image: project1Img },
+              { title: "Mobile App Design", tag: "Royal whase", link:"https://www.figma.com/design/gISq4GkIWEiMPQTVb5PMWE/Kel-6_Aplikasi-Royal-Washes?node-id=0-1&t=uOibyZKziPg2skhH-1", image: project1Img },
               { title: "Short Editing", tag: "Video Editing", link: "https://www.tiktok.com/@jbioone/video/7535005361745513744", image: project2Img },
               { title: "UI UX Design", tag: "UI UX",  image: project3Img},
               { title: "Banner Design", image: project4Img },
