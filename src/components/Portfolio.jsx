@@ -5,6 +5,8 @@ import project1Img from '../assets/images/project1.jpg';
 import project2Img from '../assets/images/project2.jpg';
 import project3Img from '../assets/images/project3.jpg';
 import project4Img from '../assets/images/project4.jpg';
+import project5Img from '../assets/images/project5.jpg';
+import project6Img from '../assets/images/project6.jpg';
 
 
 function TypingEffect() {
@@ -100,7 +102,7 @@ function TypingDescription() {
 
 function TypingParagraph() {
   const fullText =
-    'Saya adalah seorang desainer dan developer yang passionate tentang menciptakan pengalaman digital yang menarik. Dengan perpaduan antara desain yang indah dan fungsionalitas yang solid, saya membantu brand Anda stand out di dunia digital.';
+    'Saya adalah seorang desainer yang passionate tentang menciptakan pengalaman digital yang menarik. Dengan perpaduan antara desain yang indah dan fungsionalitas yang solid, saya membantu brand Anda stand out di dunia digital.';
 
   const [text, setText] = useState('');
   const [index, setIndex] = useState(0);
@@ -216,7 +218,7 @@ export default function Portfolio() {
         <div className="absolute top-20 right-10 w-72 h-72 bg-purple-600/20 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 left-10 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl"></div>
 
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-`center` relative z-10">
           <div>
             <p className="text-gray-400 mb-2">Hello Friends 👋</p>
             <h1 className="text-5xl md:text-6xl font-bold mb-2">
@@ -300,10 +302,12 @@ export default function Portfolio() {
           
           <div className="grid md:grid-cols-2 gap-8">
             {[
-              { title: "My Todo App", tag: "Web Design", link: "https://my-todo-app-gamma-five.vercel.app/", image: project1Img },
+              { title: "Mobile App", tag: "Royal whase", link:"https://www.figma.com/design/gISq4GkIWEiMPQTVb5PMWE/Kel-6_Aplikasi-Royal-Washes?node-id=0-1&t=uOibyZKziPg2skhH-1", image: project1Img },
               { title: "Short Editing", tag: "Video Editing", link: "https://www.tiktok.com/@jbioone/video/7535005361745513744", image: project2Img },
-              { title: "UI UX Design", image: project3Img },
-              { title: "Banner Design", image: project4Img }
+              { title: "UI UX Design", tag: "UI UX",  image: project3Img},
+              { title: "Banner Design", image: project4Img },
+              { title: "My To Do", link:"https://my-todo-app-gamma-five.vercel.app/", image: project5Img },
+              { title: "Poster",image: project6Img }
             ].map((project, i) => (
               <a
                 key={i}
